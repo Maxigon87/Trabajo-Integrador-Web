@@ -29,7 +29,7 @@ form.addEventListener("submit", e => { //cuando se envie el fomr, quiero que emi
         email.placeholder = 'Ingresa tu correo';
     }
     if (textarea.value.length < 5 || textarea.value.length > 256) {
-        warnings += `El texto no esta bien<br>`
+        warnings += `El texto no está bien<br>`
         entrar = true
         textarea.placeholder = 'Cuéntame...';
         textarea.style.backgroundColor = "#F7F7AC";
@@ -39,7 +39,7 @@ form.addEventListener("submit", e => { //cuando se envie el fomr, quiero que emi
     if (entrar) {
         parrafo.innerHTML = warnings
     } else {
-        parrafo.innerHTML = "¡Enviado con éxito¡"
+        parrafo.innerHTML = "¡Enviado con éxito!"
 
         form.reset();
     }
