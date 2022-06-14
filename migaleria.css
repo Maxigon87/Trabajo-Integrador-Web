@@ -1,0 +1,110 @@
+.img-galery {
+    width: 80%;
+    height: 100%;
+    background-color: rgb(250, 248, 248,0.5);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 50px auto 50px;
+    display: grid;
+    /*Acomodar en grillas nuestras imagenes*/
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    /*separacion de abajo*/
+    overflow: auto;
+}
+
+.img-galery img {
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    max-height: 170px;
+    cursor: pointer;
+    transition: 0.7s;
+    border-radius: 10px;
+    /* border: solid yellow 1px;*/
+
+}
+
+.img-galery img:hover {
+    transform: scale(1.2);
+    filter: brightness(150%);
+}
+
+.ful-img {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+}
+
+.ful-img img {
+    width: 90%;
+    max-width: 900px;
+    max-height: 800px;
+    border: solid 1px rgb(255, 255, 0);
+}
+
+.ful-img span {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.nine{
+    
+    position: sticky;
+    margin-top: 20px;
+    position: sticky;
+    width: 15%;
+    height: 11%;
+}
+.nine h1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #222;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    background-color: rgb(204, 204, 204,0.9);
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.nine h1 span {
+    margin-top: 5px;
+    font-size: 15px;
+    color: #444;
+    word-spacing: 1px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,
+.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+    background-color: #f8f8f8;
+}

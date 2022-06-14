@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="mifoto.css">
+  <link rel="icon" type="image/png" href="img/pie.png">
+  <title>Gonzalez Maximiliano Mario</title>
+  <style>
+    body {
+      background-image: url(img/11.jpg);
+    }
+
+    #hola {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: 10px;
+    }
+
+    #mon {
+      border-radius: 100%;
+      border: solid 1px rgb(212, 212, 36);
+      margin-right: 20px;
+    }
+
+    #wrapper2 {
+      width: 40%;
+      height: 80%;
+    }
+
+    #form {
+      height: 42%;
+    }
+
+    .texto {
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .warnings {
+      width: 200px;
+      text-align: center;
+      margin: auto;
+      color: rgb(235, 222, 49);
+      padding-top: 20px;
+      font-size: 14px;
+    }
+
+    .warnings:hover {
+      transform: scale(1.2);
+      filter: brightness(150%);
+    }
+
+    #boton {
+      height: 50%;
+    }
+
+    #fotos {
+      position: sticky;
+
+    }
+
+    #form {
+      width: 10%;
+      height: 0%;
+    }
+
+    #form2 {
+      width: 30%;
+      height: 400px;
+    }
+
+    #wrapper2 {
+      width: 40%;
+      height: 75%;
+    }
+
+    .letra {
+      width: 50%;
+      height: 100%;
+      color: black;
+      font-size: 80%;
+      padding: 15px;
+      font-family: 'Cherry Swash';
+      overflow: auto;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body class="hidden">
+  <div class="may">
+    <div class="dive" id="onload">
+      <div class="lds-dual-ring"></div>
+    </div>
+  </div>
+  <div>
+    <nav class="navMenu">
+      <a href="index.html">Inicio</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Galeria.html">Galeria</a>
+      <div class="dot"></div>
+    </nav>
+  </div>
+  <div>
+    <div class="perfil" id="hola">
+
+      <div class="wrapper flex_box">
+        <form action="" method="post" id="wrapper2">
+          <div class="container-header">
+            <div class="logo-title">
+              <img src="img/logo.jpg" id="mon" alt="">
+              <h4 id="h44">"La fotografía, un arte"</h4>
+            </div>
+            <label "icon-menu"></label>
+          </div>
+          <div id="fotos">
+            <div class="container-portada">
+              <div class="capa-gradient"></div>
+              <div class="container-details">
+                <div class="details">
+
+                </div>
+              </div>
+            </div>
+            <div class="container-portada2">
+              <div class="capa-gradient"></div>
+              <div class="container-details">
+                <div class="details">
+                  <p class="letra"> ¡Hola! <br>
+                    Por lo que ya te diste cuenta, soy fotógrafo.
+                    Si bien, admiro esas fotos en las que recordamos
+                    lo vivido con nuestras familias, amigos, etc.
+                    Encontramos, que no son
+                    solo un recuerdo. Sino también una forma de
+                    expresarte, comunicarte, distraerte y descubrir nuevas cosas, ver
+                    en otro ángulo y admirar esos detalle que antes
+                    no conocíamos. <br>
+                    Hecha un vistazo a mi galería y sabrás de que
+                    estoy hablando. Luego toma tu cámara, celular
+                    lo que sea para tomar fotos y haz la prueba.
+                    Solo quiero que sepas que una foto puede
+                    demostrar mucho mas de lo que uno esta
+                    acostumbrado a hacer o a ver. <br> <br>
+                    “No solo congelas el tiempo, haces arte con él”. <br><br>
+                    Cuéntame o pregúntame lo que necesites
+                    aquí a la izquierda.
+
+                    <br><br><br><br><br>.
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="container-portada3" id="portadaotro">
+              <div class="capa-gradient"></div>
+              <div class="container-details">
+                <div class="details">
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="wrapper flex_box" id="formm">
+
+        <form action="" method="post" id="form" style="width: 30% ;height: 45%">
+          <div class="input" class="form">
+            <div class="thirteen">
+              <h1>Contacto</h1>
+            </div>
+            <label>
+              Tu nombre:
+            </label>
+            <input id="name" type="text" class="name" placeholder="Escribe tu nombre">
+          </div>
+          <div class="input">
+            <label>
+              Tu correo:
+            </label>
+            <input name="email" id="email" type="email" class="name" placeholder="Ingresa tu correo">
+          </div>
+          <div class="input">
+            <label>
+              Mensaje:
+            </label>
+            <textarea id="textarea" type="textarea" name="" placeholder="Cuéntame... " class="comment"></textarea>
+          </div>
+
+          <div class="button_wrapper">
+
+            <button type="submit" id="boton">¡Envíamelo!</button>
+            <p class="warnings" id="warnings"></p>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="js/codigo.js"></script>
+  <script src="js/validacion.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin=""></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+
+</html>

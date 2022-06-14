@@ -1,0 +1,542 @@
+@import url(https://fonts.googleapis.com/css?family=Libre+Baskerville);
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+
+
+:root {
+  --logotipo: #1a1a1a;
+  --profesion: #f2f2f2;
+  --primario: #857224;
+  --dive: #d3b22e;
+}
+
+div .navMenu a {
+  font-size: 17px;
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(img/6.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navMenu {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(244, 242, 241, 0.1);
+  padding-left: 38%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  border: var(--dive) solid 1px;
+  border-radius:  80px 80px 0px 0px;
+}
+
+.navMenu a {
+  color: #f6f4e6;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  display: inline-block;
+  width: 80px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #0a0905;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover~.dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover~.dot {
+  -webkit-transform: translateX(110px);
+  transform: translateX(110px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover~.dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(200px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover~.dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(285px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.perfil {
+  
+  color: #000000;
+  margin-top: 78px;
+  margin-left: 50px;
+  width: 95%;
+  height: 90%;
+  background-color: rgba(179, 179, 179, 0.1);
+
+  border-radius: 10px;
+  border-left: var(--dive) solid 1px;
+  border-right: var(--dive) solid 1px;
+
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow:auto
+}
+
+.dive {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  width: 100%;
+  overflow: hidden;
+}
+
+.may {
+  padding: 0px 60px 0px 60px;
+}
+
+.logotipo {
+  padding: 10px;
+  border: 5px solid var(--logotipo);
+  color: var(--logotipo);
+}
+
+.logotipo .subtitulo {
+  text-align: center;
+  color: var(--profesion);
+  background: var(--logotipo);
+  padding: 12px 20px;
+  transition: 0.5s ease all;
+  /* Cambio de color con este tiempo*/
+  font-size: 36px;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  /*Todo en mayusculas*/
+  letter-spacing: 2px;
+  /*espaciado*/
+}
+
+.logotipo:hover .subtitulo {
+  background: var(--primario);
+  /*cambia cuando paso el cursor*/
+}
+
+.texto-animado {
+  display: flex;
+  /*ordenando al lado los divs de JS*/
+  justify-content: center;
+  /*centrar el nombre*/
+  overflow: hidden;
+  /*todo lo que este afuera este oculto*/
+  font-family: "Cherry Swash";
+}
+
+.texto-animado>div {
+  /*ordenar los divs como columnas*/
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  /*para que los span se hagan hacia abajo*/
+  transition: 0.3s ease all;
+  /*tiempo de movimiento */
+}
+
+.texto-animado>div.animacion {
+  transform: translateY(-100px);
+}
+
+.texto-animado>div {
+  font-size: 100px;
+  font-weight: normal;
+  line-height: 100px;
+}
+
+.texto-animado .segunda-linea {
+  position: absolute;
+  /*texto atras del otro*/
+  top: 100px;
+}
+
+/*propiedades de iconos w f t i*/
+.icon {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+  border-radius: 50%;
+  transition: all 0.8s;
+  cursor: pointer;
+}
+
+/*Cambia los colores cuando pasa el mouse con el hover*/
+.icon:hover {
+  background-color: #e60073;
+  box-shadow: 0 0 20px #e60073;
+}
+
+.icon:hover:nth-child(3) {
+  background-color: #1877f2;
+  box-shadow: 0 0 20px #1877f2;
+}
+
+.icon:hover:nth-child(4) {
+  background-color: #25d366;
+  box-shadow: 0 0 20px #25d366;
+}
+
+.icon:hover:nth-child(5) {
+  background-color: #1da1f2;
+  box-shadow: 0 0 20px #1da1f2;
+}
+
+/*Ordeno los iconos en el medio de los ciruclos*/
+.icon i {
+  color: rgb(0, 0, 0);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /*Aqui*/
+  font-size: 1.7rem;
+}
+
+svg circle {
+  stroke-dasharray: 150;
+  /*el circulo se abrira un poco*/
+  transition: all 0.8s ease-in-out;
+}
+
+.icon:hover circle {
+  stroke-dasharray: 220;
+  /*el ciruclo se cerrara*/
+}
+
+.icons {
+  display: flex;
+  flex-direction: row;
+}
+
+input,
+textarea,
+button {
+  font-family: "Nunito", sans-serif;
+}
+
+.wrapper {
+  width: 30%;
+  height: 100%;
+  color: #fae881;
+  overflow: hidden;
+
+}
+
+#formm {
+  height: 30%;
+}
+
+
+.flex_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.box {
+  position: absolute;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  transition: 0.2s;
+}
+
+form {
+  position: absolute;
+  padding: 30px 20px;
+  width: 25%;
+  height: 60%;
+  border-radius: 7px;
+  background-color: white;
+  backdrop-filter: blur(5px);
+  background-color: rgba(158, 189, 199, 0.288);
+  overflow: auto;
+
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea {
+  padding: 8px 10px;
+  margin: 3px 8px 16px 8px;
+  background-color: rgba(222, 239, 248, 0.877);
+  border: 0px transparent;
+  border-radius: 5px;
+  color: rgb(97, 4, 184);
+  font-size: 16px;
+  word-break: break-all;
+  /* haven't found the best solution here yet, paragraphs are difficult to deal with */
+  hyphens: auto;
+  z-index: 1;
+}
+
+label {
+  margin: 0 8px;
+  font-size: 14px;
+  color: white;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  padding: 8px 14px;
+  margin: 20px 8px 0 0;
+  border-width: 0px;
+  border-radius: 5px;
+  color: white;
+  background-color: #b69269;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+button:hover {
+  color: rgb(60, 35, 153);
+  background-color: white;
+}
+
+.star {
+  position: absolute;
+  transition: 1s;
+  overflow: hidden;
+  opacity: 1;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  z-index: -90;
+}
+
+.star svg {
+  height: 100%;
+  width: auto;
+}
+
+.star_inner {
+  height: 15px;
+}
+
+.cover {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  pointer-events: none;
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.ghost {
+  position: absolute;
+  padding: 8px 10px;
+  border: 0px transparent;
+  border-radius: 5px;
+  z-index: 1;
+  color: rgb(97, 4, 184);
+  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ghost>div {
+  margin: 0;
+  padding: 0;
+  transition: 5s;
+}
+
+.blank {
+  width: 4px;
+}
+
+form.fade {
+  animation: fade forwards ease 5s;
+}
+
+.seven h1 {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgb(161, 161, 158);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.seven h1:after,
+.seven h1:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #dbdb12;
+  border-top: 1px solid #dbdb12;
+  height: 2px;
+  background-color: #dbdb12;
+}
+
+
+
+/* From uiverse.io by @mrhyddenn */
+.loader {
+  width: 6em;
+  height: 6em;
+  font-size: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader .face {
+  position: absolute;
+  border-radius: 50%;
+  border-style: solid;
+  animation: animate023845 3s linear infinite;
+}
+
+.loader .face:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  color: gold;
+  border-color: currentColor transparent transparent currentColor;
+  border-width: 0.2em 0.2em 0em 0em;
+  --deg: -45deg;
+  animation-direction: normal;
+}
+
+.loader .face:nth-child(2) {
+  width: 70%;
+  height: 70%;
+  color: gold;
+  border-color: currentColor currentColor transparent transparent;
+  border-width: 0.2em 0em 0em 0.2em;
+  --deg: -135deg;
+  animation-direction: reverse;
+}
+
+.loader .face .circle {
+  position: absolute;
+  width: 50%;
+  height: 0.1em;
+  top: 50%;
+  left: 50%;
+  background-color: transparent;
+  transform: rotate(var(--deg));
+  transform-origin: left;
+}
+
+.loader .face .circle::before {
+  position: absolute;
+  top: -0.5em;
+  right: -0.5em;
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-color: currentColor;
+  border-radius: 50%;
+  box-shadow: 0 0 2em,
+              0 0 4em,
+              0 0 6em,
+              0 0 8em,
+              0 0 10em,
+              0 0 0 0.5em rgba(255, 255, 0, 0.1);
+}
+
+@keyframes animate023845 {
+  to {
+    transform: rotate(1turn);
+  }
+}
